@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Hobbinity
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header.header
+      .header__bar
+        - if user_signed_in?
+          = link_to root_path , class:"header__bar__left", id:"" do
+            = fa_icon 'user'
+            =current_user.name
+            さん
+          = link_to destroy_user_session_path, class:"header__bar__right", method: :delete do
+            ログアウト
+            = fa_icon 'sign-out'
+        - else
+          .header__bar__left
+            Hobbinity
+    = yield
+    .footer
+      = link_to root_path, class:'footer__user' do
+        = fa_icon'user-circle', class:'footer__user__icon'
+      = link_to categories_path, class:'footer__groups' do
+        = fa_icon'users', class:'footer__groups__icon'
+      = link_to root_path, class:'footer__edit' do
+        = fa_icon'cogs', class:'footer__edit__icon'

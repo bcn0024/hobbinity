@@ -1,0 +1,98 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #f6f6f6;
+  height: 56px;
+  width: 1150px;
+  &__bar{
+    width: 100%;
+    padding: 0 150px;
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 56px;
+      text-decoration: none;
+      color: #fff;
+    }
+    &__right{
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 56px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+.wrapper{
+  height: calc(100vh - 156px);
+  width: 1450px;
+  background-color: #777777;
+  overflow: scroll;
+  margin-top: 56px;
+  &__images{
+    &__card-img{
+      position: relative;
+      padding-top: 20px;
+      &__image{
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        font-size: 20px;
+        color: #d0d8e7;
+      }
+    }
+  }
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  width: 1450px;
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 50px;
+  line-height: 100px;
+  &__user{
+    margin: 0 auto;
+    color: #fff;
+    &__icon{
+      background-color: #808080;
+      padding: 10px 150px;
+      border-radius: 100px;
+    }
+  }
+  &__groups{
+    margin: 0 auto;
+    color: #fff;
+    &__icon{
+      background-color: #808080;
+      padding: 10px 150px;
+      border-radius: 100px;
+    }
+  }
+  &__edit{
+    margin: 0 auto;
+    color: #fff;
+    &__icon{
+      background-color: #808080;
+      padding: 10px 150px;
+      border-radius: 100px;
+    }
+  }
+}
+a:hover{
+  text-decoration: underline;
+  background-color: aqua;
+}

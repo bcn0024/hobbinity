@@ -1,0 +1,7 @@
+.categories
+  - @categories.each do |category|
+    = link_to category_path(category.id) do
+      .categories__category{:style => "background-image: url(#{category.image});"}
+        %span.categories__category__name
+          = category.content
+  = paginate(@categories)
