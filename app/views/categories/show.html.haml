@@ -1,0 +1,14 @@
+.groups
+  - if @groups
+    %p グループ一覧
+    %ul
+      - @groups.each do |group|
+        %li
+          =link_to category_group_path(@category.id), id: "" do
+            = group.name
+            -# showなのでgroup.idは引き連れるが、category.idは無理やから書いたげる
+  - else
+    %p 現在グループはありません。
+=link_to new_category_group_path(@category.id), class:"group-create", id: "" do
+  グループ作成
+  -# ＠categoryのidを取得してnewへパス。newのためidは勝手には引き連れない
