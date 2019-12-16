@@ -9,12 +9,13 @@ class GroupsController < ApplicationController
 
   def create
     group = Group.create(group_params)
-    redirect_to "/categories/#{@category.id}"  # categoryshow=グループ一覧の詳細画面に遷移する
+    redirect_to "/categories/#{@category.id}", notice: "グループ「#{group.name}」を登録しました。"  # categoryshow=グループ一覧の詳細画面に遷移する
   end
   
   def show
-    @messages = Message.all
+    @group = Group.find(params[:id])
     @message = Message.new
+    @messages = @group.messages
   end
 
   private
@@ -27,4 +28,5 @@ class GroupsController < ApplicationController
     @category = Category.find(params[:category_id])
     #  カテゴリーモデルからクリックのあったグループIDを携えたものを変数に代入、これでgroup/viewでも使用可能→before actionへ
   end
+
 end
