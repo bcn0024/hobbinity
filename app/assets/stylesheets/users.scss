@@ -31,6 +31,11 @@
       color: #fff;
     }
   }
+  .alert.alert-success{
+    font-size: 20px;
+    font-weight: bold;
+    color: tomato;
+  }
 }
 .wrapper{
   height: calc(100vh - 156px);

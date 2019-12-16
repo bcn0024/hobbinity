@@ -21,6 +21,8 @@
         - else
           .header__bar__left
             Hobbinity
+      - if flash.notice.present?
+        .alert.alert-success= flash.notice
     = yield
     .footer
       = link_to root_path, class:'footer__user' do

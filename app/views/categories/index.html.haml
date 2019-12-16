@@ -1,7 +1,10 @@
 .categories
   - @categories.each do |category|
     = link_to category_path(category.id) do
+      -# 引数にはURI Pattern（/categories/:id(.:format)）で示した:idに入るべき主キーであるidカラムを取得
       .categories__category{:style => "background-image: url(#{category.image});"}
         %span.categories__category__name
           = category.content
   = paginate(@categories)
+
+  
