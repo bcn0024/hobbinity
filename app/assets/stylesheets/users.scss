@@ -44,6 +44,11 @@
   overflow: scroll;
   margin-top: 56px;
   &__images{
+    // display: flex;
+    // flex-wrap: wrap;
+    .images{
+      border-radius: 50px;
+    }
     &__card-img{
       position: relative;
       padding-top: 20px;
@@ -52,7 +57,10 @@
         bottom: 15px;
         left: 15px;
         font-size: 20px;
-        color: #d0d8e7;
+        color:#DDDDDD;
+        border: solid 2px;
+        font-weight: bold;
+        
       }
     }
   }
