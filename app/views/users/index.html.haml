@@ -1,17 +1,18 @@
 -# .headerはapplication.html.hamlに記載
+
 .wrapper
   .wrapper__images
     .wrapper__images__card-img
-      =image_tag("/assets/sample1.jpg",height: "390",width: "40%", alt: "クライアントの画像1", class: "images")
+      =image_tag("/assets/sample1.jpg",height: "390",width: "100%", alt: "クライアントの画像1", class: "images")
       %h3.wrapper__images__card-img__image 映画/タイタニック
     .wrapper__images__card-img
-      =image_tag("/assets/sample2.jpg",height: "390",width: "40%", alt: "クライアントの画像2", class: "images")
+      =image_tag("/assets/sample2.jpg",height: "390",width: "100%", alt: "クライアントの画像2", class: "images")
       %h3.wrapper__images__card-img__image 本/さまよう刃
     .wrapper__images__card-img
-      =image_tag("/assets/sample3.jpg",height: "390",width: "40%", alt: "クライアントの画像3", class: "images")
+      =image_tag("/assets/sample3.jpg",height: "390",width: "100%", alt: "クライアントの画像3", class: "images")
       %h3.wrapper__images__card-img__image アウトドア/サーフィン
     .wrapper__images__card-img
-      =image_tag("/assets/sample4.jpg",height: "390",width: "40%", alt: "クライアントの画像4", class: "images")
+      =image_tag("/assets/sample4.jpg",height: "390",width: "100%", alt: "クライアントの画像4", class: "images")
       %h3.wrapper__images__card-img__image 音楽/ジャズ
 
   -# .wrapper__contents
@@ -19,4 +20,5 @@
       -# .content_post{:style => "background-image: url(#{group.category.image});"}
         -# %span.name
           -# = group.name
+
 -# .footerはapplication.html.hamlに記載

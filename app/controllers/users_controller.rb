@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @groups = Group.includes(:current_user)
+    # user = current_user.id
+    # @groups = user.group_users.groups
+    # @groups.users << current_user
   end
 end

@@ -44,22 +44,24 @@
   overflow: scroll;
   margin-top: 56px;
   &__images{
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     .images{
       border-radius: 50px;
     }
     &__card-img{
+      width: 40%;
       position: relative;
-      padding-top: 20px;
+      padding: 30px 30px 0px 30px;
       &__image{
         position: absolute;
-        bottom: 15px;
-        left: 15px;
+        bottom: 30px;
+        left: 50px;
         font-size: 20px;
-        color:#DDDDDD;
-        border: solid 2px;
+        color: oldlace;
         font-weight: bold;
+        text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
         
       }
     }

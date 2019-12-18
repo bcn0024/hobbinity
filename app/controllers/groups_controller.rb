@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
   
   def new
     @group = Group.new
+    # @group.users << current_userと記述することで、現在ログイン中のユーザーを、新規作成したグループに追加しています。
   end
 
   # チャットスペースではgroupの中にmessageをネストさせており、messageindexのおいてform内のモデルに＠group＠messageと指定しているが、これはmessageコントローラーにおいて@message = Message.newと @group = Group.find(params[:group_id])が定義されているため、そのグループにメッセージを送ることができる。今回はcategoryの中にgroupをネストさせているがgroupnewにおいてform内のモデルに＠category＠groupと指定しているが、＠categoryは定義されていない。この場合グループを作成するにあたって、どのカテゴリーに属するかが指定できていないのでは？
