@@ -33,15 +33,17 @@
     line-height: 1.57;
     letter-spacing: 0.15em;
     font-size: 25px;
-    color: #666;
     text-align: center;
     margin: 50px 0;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
     a:link {color:#fff; text-decoration:none }
-    a:visited { color:#fff; text-decoration:none }
+    a:visited { color: #fff; text-decoration:none }
     a:hover { color:#fff; text-decoration:none }
     a:active { color:#fff; text-decoration:none }
   }
 }
+
 .groups{
   margin: 56px 0px 0px 0px;
   p{
@@ -61,6 +63,9 @@
     overflow: scroll;
     li{
       height: 60px;
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 20px;
       background-color: #888888;
       font-size: 30px;
       a:link {color:black; text-decoration:none }
@@ -68,6 +73,7 @@
       font-weight: bold;
       line-height: 60px;
       box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+      border-radius: 10px;
     }
   }
 }

@@ -1,4 +1,4 @@
-.categories
+.categories{style: "background-image: url(/images/sample14.jpeg);"}
   - @categories.each do |category|
     = link_to category_path(category.id) do
       -# 引数にはURI Pattern（/categories/:id(.:format)）で示した:idに入るべき主キーであるidカラムを取得
