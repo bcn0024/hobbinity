@@ -1,6 +1,7 @@
-.group__box
-  .group__name
-    新規グループの作成
-  = form_with model: [@category, @group], class: :form do |form|
-    = form.text_field :name, placeholder: 'グループ名を入力してください', class: 'form__group'
-    = form.submit '作成する',class: :form__btn
+.group-container{style: "background-image: url(/images/sample14.jpeg);"}
+  .group__box
+    .group__name
+      新規グループの作成
+    = form_with model: [@category, @group], class: :form do |form|
+      = form.text_field :name, placeholder: 'グループ名を入力してください', class: 'form__group'
+      = form.submit '作成する',class: :form__btn

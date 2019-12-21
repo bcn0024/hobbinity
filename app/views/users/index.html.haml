@@ -1,22 +1,8 @@
--# .headerはapplication.html.hamlに記載
-.wrapper
-  .wrapper__images
-    .wrapper__images__card-img
-      %img{:alt => "クライアントの画像1", :src => "assets/sample1.jpg"}/
-      %h3.wrapper__images__card-img__image 映画/タイタニック
-    .wrapper__images__card-img
-      %img{:alt => "クライアントの画像2", :src => "assets/sample2.jpg"}/
-      %h3.wrapper__images__card-img__image 本/さまよう刃
-    .wrapper__images__card-img
-      %img{:alt => "クライアントの画像3", :src => "assets/sample3.jpg"}/
-      %h3.wrapper__images__card-img__image アウトドア/サーフィン
-    .wrapper__images__card-img
-      %img{:alt => "クライアントの画像4", :src => "assets/sample4.jpg"}/
-      %h3.wrapper__images__card-img__image 音楽/ジャズ
-
-  -# .wrapper__contents
-    -# - @groups.each do |group|
-      -# .content_post{:style => "background-image: url(#{group.category.image});"}
-        -# %span.name
-          -# = group.name
--# .footerはapplication.html.hamlに記載
+.wrapper{style: "background-image: url(/images/sample14.jpeg);"}
+  .boxes
+    =link_to user_path(current_user.id), class:"select-role" do
+      .left-box{style: "background-image: url(/images/sample12.jpeg);"}
+        参加グループ一覧
+    =link_to categories_path, class:"select-role" do
+      .right-box{style: "background-image: url(/images/sample13.jpeg);"}
+        趣味で繋がる

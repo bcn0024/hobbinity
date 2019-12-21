@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
+  
   def index
-    @groups = Group.includes(:current_user)
   end
+  
+  def show
+    @user = User.find(params[:id])
+    @groups = @user.groups
+  end
+
 end
