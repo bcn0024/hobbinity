@@ -11,7 +11,7 @@
           %p.messages__message__text__content
             = message.content
         = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-.form
+.form{style: "background-image: url(/images/sample16.jpeg);"}
   = form_for([@category,@group,@message]) do |f|
     .form__new_message
       .form__new_message__input-box
