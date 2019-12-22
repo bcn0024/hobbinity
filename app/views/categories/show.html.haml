@@ -1,17 +1,17 @@
 .group-box{style: "background-image: url(/images/sample14.jpeg);"}
-.groups
-  - if @groups
-    %p グループ一覧
-    %ul
-      - @groups.each do |group|
-        %li
-          =link_to category_group_path(@category.id, group.id) do
-            = group.name
-            -# category.idはコントローラーでfindしたものを用いるため＠が必要、
-            -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
-            -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける
-  - else
-    %p 現在グループはありません。
+  .groups
+    - if @groups
+      %p グループ一覧
+      %ul
+        - @groups.each do |group|
+          %li
+            =link_to category_group_path(@category.id, group.id) do
+              = group.name
+              -# category.idはコントローラーでfindしたものを用いるため＠が必要、
+              -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
+              -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける
+    - else
+      %p 現在グループはありません。
 =link_to new_category_group_path(@category.id), class:"group-create", id: "" do
   グループ作成
   -# ＠categoryのidを取得してnewへパス。newのためidは勝手には引き連れない
