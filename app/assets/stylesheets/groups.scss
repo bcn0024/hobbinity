@@ -35,7 +35,13 @@
 }
 .message{
   margin-top: 56px;
-}
-.form{
   min-height: 648px;
+  position: relative;
+  .message__upper-info{
+    padding-bottom: 175px;
+  }
+  .form{
+  position: absolute;
+  bottom: 100px;
+  }
 }
