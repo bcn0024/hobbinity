@@ -1,4 +1,4 @@
-.message
+.message{style: "background-image: url(/images/sample16.jpeg);"}
   .message__upper-info
     - @messages.each do |message|
       %p.messages__message__upper-info__talker
@@ -11,12 +11,12 @@
           %p.messages__message__text__content
             = message.content
         = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-.form{style: "background-image: url(/images/sample16.jpeg);"}
-  = form_for([@category,@group,@message]) do |f|
-    .form__new_message
-      .form__new_message__input-box
-        = f.text_field :content, class: "", placeholder: 'type a message'
-        = f.label :image, class: "" do
-          = fa_icon 'picture-o'
-          = f.file_field :image, class: ""
-      = f.submit 'Send', class: ""
+  .form
+    = form_for([@category,@group,@message]) do |f|
+      .form__new_message
+        .form__new_message__input-box
+          = f.text_field :content, class: "", placeholder: 'type a message'
+          = f.label :image, class: "" do
+            = fa_icon 'picture-o'
+            = f.file_field :image, class: ""
+        = f.submit 'Send', class: ""
