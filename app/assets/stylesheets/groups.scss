@@ -35,7 +35,71 @@
 }
 .message{
   margin-top: 56px;
-}
-.form{
   min-height: 648px;
+  position: relative;
+  &__upper-info{
+    padding-bottom: 300px;
+    .message-box{
+      padding-bottom: 30px;
+      .message-head{
+        display: flex;
+        padding: 10px 10px;
+        .person{
+          font-size: 4rem;
+          margin: 0px 10px;
+        }
+        .message-talker{
+          padding-right: 15px;
+        }
+        .message-date{
+          color: #696969;
+        }
+      }
+      .message-content{
+        padding: 10px 50px;
+        width: 600px;
+      }
+    }
+  }
+  .form{
+    position: fixed;
+    bottom: 100px;
+    &__new_message{
+      width: 1450px;
+      height: 100px;
+      display: flex;
+      background-color: #808080;
+      &__input-box{
+        position: relative;
+        #message_content{
+          border-radius: 10px;
+          width: 1200px;
+          height: 60px;
+          margin: 20px 30px 10px 30px;
+        }
+        .image-label{
+          position: absolute;
+          right: 50px;
+          bottom: 30px;
+          .fa-picture-o{
+            font-size: 2em;
+          }
+          .image-file{
+            display: none;
+          }
+        }
+        .submit-btn{
+          position: absolute;
+          bottom: 15px;
+          right: -140px;
+          width: 150px;
+          height: 150px;
+          border-radius: 100px;
+          font-size: 3em;
+          background-color:#D3D3D3;
+
+        }
+      }
+    }
+  }
 }
