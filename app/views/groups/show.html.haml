@@ -15,7 +15,7 @@
     = form_for([@category,@group,@message]) do |f|
       .form__new_message
         .form__new_message__input-box
-          = f.text_field :content, placeholder: 'type a message'
+          = f.text_field :content, placeholder: 'メッセージを入力してください（誹謗・中傷の報告があった場合、強制退会となる可能性がありますのでご注意ください）'
           = f.label :image, class: "image-label" do
             = fa_icon 'picture-o'
             = f.file_field :image, class: "image-file"
