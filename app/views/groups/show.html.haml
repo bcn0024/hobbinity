@@ -15,8 +15,9 @@
     = form_for([@category,@group,@message]) do |f|
       .form__new_message
         .form__new_message__input-box
-          = f.text_field :content, class: "", placeholder: 'type a message'
-          = f.label :image, class: "" do
+          = f.text_field :content, placeholder: 'type a message'
+          = f.label :image, class: "image-label" do
             = fa_icon 'picture-o'
-            = f.file_field :image, class: ""
-        = f.submit 'Send', class: ""
+            = f.file_field :image, class: "image-file"
+          = button_tag type: 'submit', class: "submit-btn" do
+            = fa_icon 'paper-plane'
