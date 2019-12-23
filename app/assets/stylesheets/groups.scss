@@ -39,6 +39,27 @@
   position: relative;
   &__upper-info{
     padding-bottom: 300px;
+    .message-box{
+      padding-bottom: 30px;
+      .message-head{
+        display: flex;
+        padding: 10px 10px;
+        .person{
+          font-size: 3rem;
+          margin: 0px 10px;
+        }
+        .message-talker{
+          padding-right: 15px;
+        }
+        .message-date{
+          color: #696969;
+        }
+      }
+      .message-content{
+        padding: 10px 30px;
+        width: 600px;
+      }
+    }
   }
   .form{
     position: fixed;

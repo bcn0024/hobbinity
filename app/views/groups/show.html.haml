@@ -1,21 +1,25 @@
 .message{style: "background-image: url(/images/sample16.jpeg);"}
   .message__upper-info
     - @messages.each do |message|
-      %p.messages__message__upper-info__talker
-        = message.user.name
-        -# @messages.user.nameは配列に対してのuserは誰？ってエラーが出てる
-      %p.messages__message__upper-info__date
-        = message.created_at.strftime("%Y年/%m月/%d日 %H時%M分")
-      %p.messages__message__text
-        - if message.content.present?
-          %p.messages__message__text__content
-            = message.content
-        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+      .message-box
+        .message-head
+          -# 条件分岐で写真を表示させる
+          = fa_icon 'user-circle',class: "person"
+          %p.message-talker
+            = message.user.name
+            -# @messages.user.nameは配列に対してのuserは誰？ってエラーが出てる
+          %p.message-date
+            = message.created_at.strftime("%Y年/%m月/%d日 %H時%M分")
+        %p.message-text
+          - if message.content.present?
+            %p.message-content
+              = message.content
+          = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
   .form
     = form_for([@category,@group,@message]) do |f|
       .form__new_message
         .form__new_message__input-box
-          = f.text_field :content, placeholder: 'メッセージを入力してください（誹謗・中傷の報告があった場合、強制退会となる可能性がありますのでご注意ください）'
+          = f.text_field :content, placeholder: 'メッセージを入力してください（誹謗・中傷の報告があった場合、強制退会となる可能性がありますのでご注意ください）', cols: "20", row:"3", wrap: "hard"
           = f.label :image, class: "image-label" do
             = fa_icon 'picture-o'
             = f.file_field :image, class: "image-file"
