@@ -6,7 +6,8 @@
         - @groups.each do |group|
           %li
             =link_to category_group_path(@category.id, group.id) do
-              = group.name
+              .group-name
+                = group.name
               -# category.idはコントローラーでfindしたものを用いるため＠が必要、
               -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
               -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける

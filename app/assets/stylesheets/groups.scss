@@ -38,7 +38,7 @@
   min-height: 648px;
   position: relative;
   &__upper-info{
-    padding-bottom: 300px;
+    padding-bottom: 200px;
     .message-box{
       padding-bottom: 30px;
       .message-head{
@@ -49,6 +49,7 @@
           margin: 0px 10px;
         }
         .message-talker{
+          font-size: 20px;
           padding-right: 15px;
         }
         .message-date{
@@ -97,7 +98,10 @@
           border-radius: 100px;
           font-size: 3em;
           background-color:#D3D3D3;
-
+          &:hover{
+            transition: .7s;
+            background-color: #00BFFF;
+          }
         }
       }
     }
