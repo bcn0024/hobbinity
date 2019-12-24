@@ -54,6 +54,12 @@
     min-height: 632px;
     .images{
       border-radius: 50px;
+      transition: 0.3s;
+      &:hover{
+        transition: 0.3s;
+        transform: scale(1.02, 1.02);
+        box-shadow: 0 50px 50px 0 rgba(0, 0, 0, 0.25);
+      }
     }
     &__card-img{
       width: 40%;
@@ -88,6 +94,10 @@
         margin-right: 50px;
         border: solid 3px #A9A9A9;
         border-radius: 50px;
+        &:hover{
+          transition: 0.3s;
+          transform: scale(1.02, 1.02);
+        }
       }
       .right-box{
         height: 500px;
@@ -101,6 +111,10 @@
         margin-left: 50px;
         border: solid 3px #A9A9A9;
         border-radius: 50px;
+        &:hover{
+          transition: 0.3s;
+          transform: scale(1.02, 1.02);
+        }
       }
     }
   }
@@ -124,6 +138,10 @@
       background-color: #808080;
       padding: 10px 150px;
       border-radius: 100px;
+      &:hover{
+        transition: .5s;
+        background-color: #BAD3FF;
+      }
     }
   }
   &__groups{
@@ -133,6 +151,10 @@
       background-color: #808080;
       padding: 10px 150px;
       border-radius: 100px;
+      &:hover{
+        transition: .5s;
+        background-color: #BAD3FF;
+      }
     }
   }
   &__edit{
@@ -142,10 +164,10 @@
       background-color: #808080;
       padding: 10px 150px;
       border-radius: 100px;
+      &:hover{
+        transition: .5s;
+        background-color: #BAD3FF;
+      }
     }
   }
-}
-a:hover{
-  text-decoration: underline;
-  background-color: aqua;
 }
