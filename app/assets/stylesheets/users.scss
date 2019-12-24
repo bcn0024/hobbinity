@@ -94,6 +94,10 @@
         margin-right: 50px;
         border: solid 3px #A9A9A9;
         border-radius: 50px;
+        &:hover{
+          transition: 0.3s;
+          transform: scale(1.02, 1.02);
+        }
       }
       .right-box{
         height: 500px;
@@ -107,6 +111,10 @@
         margin-left: 50px;
         border: solid 3px #A9A9A9;
         border-radius: 50px;
+        &:hover{
+          transition: 0.3s;
+          transform: scale(1.02, 1.02);
+        }
       }
     }
   }
