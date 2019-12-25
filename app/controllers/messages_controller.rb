@@ -9,7 +9,10 @@ class MessagesController < ApplicationController
   def create
     @message = Message.create(message_params)
     # このcreateができた時点でMessageにcategoryとgroupが紐づいているのでそれを変数化して下で利用。
-    redirect_to "/categories/#{@message.group.category.id}/groups/#{@message.group.id}"
+    respond_to do |format|
+      format.html { redirect_to "/categories/#{@message.group.category.id}/groups/#{@message.group.id}", notice: "メッセージを送信しました" }
+      format.json
+    end
   end
 end
 
