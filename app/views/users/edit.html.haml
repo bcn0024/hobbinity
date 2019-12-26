@@ -3,57 +3,14 @@
     本人情報の編集
   .main_form
     = form_for [@user] do |f|
-      .form_head
-        %p.form_head__message
-          お客様の本人情報をご登録ください。<br>登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
-        %p.form_head__upload
-          =link_to "#", class: "form_head__link" do
-            本人確認書類のアップロードについて
+      .form_box
+        = f.label "プロフィール画像"
+        %span.free 任意
+        = fa_icon 'user-circle',class: "person"
+        -# = f.text_field :image, class: 'form_box__input', placeholder: ''
       .form_box
         = f.label "お名前"
-        %p
-          = @user.name
-          = @user.name
-
-      .form_box
-        = f.label "お名前カナ"
-        %p
-          = @user.name
-          = @user.name
-
-      .form_box
-        = f.label :birthday, "生年月日"
-        %p
-          = @user.name
-          年
-          = @user.name
-          月
-          = @user.name
-          日
-
-      -# .form_box
-      -#   = f.label "郵便番号"
-      -#   %span 任意
-      -#   = f.text_field :postal_code, class: 'form_box__input', placeholder: '例) 1234567'
-      -# .form_box
-      -#   = f.label "市区町村"
-      -#   %span 任意
-      -#   = f.text_field :municipalities, class: 'form_box__input', placeholder: '例)横浜市緑区'
-      -# .form_box
-      -#   = f.label "番地"
-      -#   %span 任意
-      -#   = f.text_field :address, class: 'form_box__input', placeholder: '例) 青山1-1-1'
-
-      -# .form_box
-      -#   = f.label "建物名"
-      -#   %span 任意
-      -#   = f.text_field :building, class: 'form_box__input', placeholder: '例)柳ビル103'
-
+        %span.abso 必須
+        = f.text_field :name, class: 'form_box__input'
       = f.submit "登録する", class: "form_submit"
-
-      .form_box
-        .form_bottom
-          %p.form_bottom__upload
-            =link_to "", class: "form_bottom__link" do
-              本人情報の登録について
-              
+= render partial: "shared/footer"
