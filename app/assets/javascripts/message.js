@@ -32,10 +32,14 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .always(function(){
+      $('.submit').prop('disabled', false);
+    })
     .done(function(data){
       var html = buildHTML(data);
       $('.message__upper-info').append(html)
-      $('#message_content').val('')
+      $('.message__upper-info').animate({ scrollTop: $('.message__upper-info')[0].scrollHeight });
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('error');

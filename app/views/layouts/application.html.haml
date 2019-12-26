@@ -7,7 +7,21 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"}
   %body
+    .user-popup
+      .userpop-content
+        %p ここをクリックすると、現在参加しているグループの一覧が表示されます
+        %button#user-close OK
+    .group-popup
+      .grouppop-content
+        %p ここをクリックすると、様々な趣味カテゴリーの一覧が表示されます
+        %button#group-close OK
+    .edit-popup
+      .editpop-content
+        %p ここをクリックすると、ご自身のプロフィールなどの編集ができます
+        %button#edit-close OK
     %header.header
       .header__bar
         - if user_signed_in?
