@@ -3,5 +3,5 @@
     = fa_icon'user-circle', class:'footer__user__icon'
   = link_to categories_path, class:'footer__groups' do
     = fa_icon'users', class:'footer__groups__icon'
-  = link_to root_path, class:'footer__edit' do
+  = link_to edit_user_path(current_user.id), class:'footer__edit' do
     = fa_icon'cogs', class:'footer__edit__icon'
