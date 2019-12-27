@@ -13,7 +13,7 @@
         %p.message-text
           %p.message-content
             = message.content
-          = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+          = image_tag message.image.url , class: 'lower-message__image' if message.image.present?
   .form
     = form_for([@category,@group,@message]) do |f|
       .form__new_message
