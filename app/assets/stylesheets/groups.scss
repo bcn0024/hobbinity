@@ -38,7 +38,9 @@
   min-height: 648px;
   position: relative;
   &__upper-info{
+    height: calc(100vh - 260px);
     padding-bottom: 200px;
+    overflow: scroll;
     .message-box{
       padding-bottom: 30px;
       .message-head{
