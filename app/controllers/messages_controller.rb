@@ -1,7 +1,4 @@
 class MessagesController < ApplicationController
-  # before_action :set_category, :set_group, only: [:create]
-
-
   def index
     @messages = Message.includes(:current_user)
   end
