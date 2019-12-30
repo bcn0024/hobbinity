@@ -3,8 +3,10 @@
     - @messages.each do |message|
       .message-box
         .message-head
-          -# 条件分岐で写真を表示させる
-          = fa_icon 'user-circle',class: "person"
+          - if message.user.image.present?
+            = image_tag message.user.image.url,class: "person-icon", size: "64x64"
+          - else
+            = fa_icon 'user-circle',class: "person"
           %p.message-talker
             = message.user.name
             -# @messages.user.nameは配列に対してのuserは誰？ってエラーが出てる
@@ -14,6 +16,8 @@
           %p.message-content
             = message.content
           = image_tag message.image.url , class: 'lower-message__image' if message.image.present?
+  .join-group
+    = fa_icon 'door-open'
   .form
     = form_for([@category,@group,@message]) do |f|
       .form__new_message

@@ -46,13 +46,17 @@
       .message-head{
         display: flex;
         padding: 10px 10px;
+        .person-icon{
+          border-radius: 100px;
+          margin: 0px 10px;
+        }
         .person{
           font-size: 4rem;
           margin: 0px 10px;
         }
         .message-talker{
           font-size: 20px;
-          padding-right: 15px;
+          padding: 0px 15px;
         }
         .message-date{
           color: #696969;
