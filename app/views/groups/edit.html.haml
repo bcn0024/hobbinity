@@ -1,0 +1,9 @@
+.group-container{style: "background-image: url(/images/sample14.jpeg);"}
+  .group__box
+    .group__name
+      下記のグループに参加する
+    = form_with model: [@category, @group], class: :form do |form|
+      -# = form.text_field :name, placeholder: 'グループ名を入力してください', class: 'form__group'
+      = form.label @group.name, class: 'exsited-group'
+      = form.submit '参加する',class: :form__btn
+= render partial: "shared/footer"
