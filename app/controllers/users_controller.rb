@@ -13,6 +13,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def update
+    if current_user.update(user_params)
+      redirect_to  user_path
+    else
+      render :edit
+    end
+  end
+
   def move_to_index
     redirect_to root_path unless user_signed_in? && current_user.id == @user.id
   end
@@ -20,4 +28,10 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+end
+
+private
+
+def user_params
+  params.require(:user).permit(:name, :image)
 end
