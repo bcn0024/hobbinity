@@ -7,8 +7,11 @@
         プロフィール画像
         %span.free 任意
         = f.label :image do
-          = fa_icon 'user-circle',class: "person"
           = f.file_field :image, class:"person-image"
+          - if @user.image.present?
+            = image_tag @user.image.url,class: "person", size: "188x188"
+          - else
+            = fa_icon 'user-circle',class: "person"
       .form_box
         = f.label "お名前"
         %span.abso 必須

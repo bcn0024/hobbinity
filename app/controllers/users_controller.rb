@@ -14,11 +14,8 @@ class UsersController < ApplicationController
   end
   
   def update
-    if current_user.update(user_params)
-      redirect_to  user_path
-    else
-      render :edit
-    end
+    current_user.update(user_params)
+      redirect_to  edit_user_path
   end
 
   def move_to_index
