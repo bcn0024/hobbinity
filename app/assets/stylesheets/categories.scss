@@ -53,11 +53,24 @@
   min-height: 573px;
   .groups{
     margin: 56px 0px 0px 0px;
-    .group-name{
-      transition: 0.3s;
-      &:hover{
+    .group-list{
+      display: flex;
+      flex-wrap: wrap;
+      .group-name{
         transition: 0.3s;
-        transform: scale(1.02, 1.02);
+        &:hover{
+          transition: 0.3s;
+          transform: scale(1.02, 1.02);
+        }
+      }
+      .group-length{
+        margin-left: 60px;
+        padding: 0px 10px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        background-color: #999999;
+        border-radius: 30px;
       }
     }
     p{

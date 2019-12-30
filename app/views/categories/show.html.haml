@@ -5,10 +5,11 @@
       %ul
         - @groups.each do |group|
           %li
-            =link_to category_group_path(@category.id, group.id) do
+            =link_to category_group_path(@category.id, group.id), class:"group-list" do
               .group-name
                 = group.name
-                = "(#{group.users.length}人参加中)"
+              .group-length
+                = "#{group.users.length}人が参加してます"
               -# category.idはコントローラーでfindしたものを用いるため＠が必要、
               -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
               -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける
