@@ -1,13 +1,14 @@
 .main-right
-  %h2.check
+  .check
     本人情報の編集
   .main_form
     = form_for [@user] do |f|
       .form_box
-        = f.label "プロフィール画像"
+        プロフィール画像
         %span.free 任意
-        = fa_icon 'user-circle',class: "person"
-        -# = f.text_field :image, class: 'form_box__input', placeholder: ''
+        = f.label :image do
+          = fa_icon 'user-circle',class: "person"
+          = f.file_field :image, class:"person-image"
       .form_box
         = f.label "お名前"
         %span.abso 必須

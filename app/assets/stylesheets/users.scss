@@ -192,6 +192,9 @@
 .form_box {
   width: 50%;
   margin: 30px auto 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
   label {
     font-size: 14px;
     font-weight: 600;
@@ -221,6 +224,9 @@
     background-color: #00BFFF;
     padding: 2px 4px;
     border-radius: 2px;;
+  }
+  .person-image{
+    display: none;
   }
   .person{
     margin-top: 30px;
