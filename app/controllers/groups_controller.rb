@@ -16,6 +16,15 @@ class GroupsController < ApplicationController
     @messages = @group.messages
   end
 
+  def edit
+    @group = Group.find(params[:id])
+    @group.users << current_user
+  end
+  
+  def update
+    @group.update
+  end
+
   private
   def group_params
     params.require(:group).permit(:name).merge(user_ids: [current_user.id], category_id: params[:category_id])

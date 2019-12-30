@@ -71,6 +71,21 @@
       }
     }
   }
+  .joint-door{
+    margin-bottom: 200px;
+    .join-group{
+      .door-open{
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        font-size: 3em;
+        background-color: red;
+        display: inline-block;
+        text-align: center;
+        line-height: 150px;
+      }
+    }
+  }
   .form{
     position: fixed;
     bottom: 100px;
