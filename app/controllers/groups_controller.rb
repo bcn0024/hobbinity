@@ -19,13 +19,11 @@ class GroupsController < ApplicationController
   def edit
     @group = Group.find(params[:id])
     @group.users << current_user
-  end
-  
-  def update
-    @group.update
+    redirect_to user_path(current_user.id)
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name).merge(user_ids: [current_user.id], category_id: params[:category_id])
     # createするものに対して（今回はグループ）マージしたいIDがhas manyの関係であればuser_ids: [current_user.id]などでidsとし、[]として引き渡す必要がある。
