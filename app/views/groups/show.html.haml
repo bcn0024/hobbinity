@@ -18,7 +18,7 @@
           = image_tag message.image.url , class: 'lower-message__image' if message.image.present?
   .joint-door
     = link_to edit_category_group_path, class:'join-group' do
-      = fa_icon 'street-view', class:'door-open'
+      = fa_icon 'bookmark', class:'door-open'
   .form
     = form_for([@category,@group,@message]) do |f|
       .form__new_message
