@@ -69,3 +69,11 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
+
+
+## group_user中間テーブル
+|group_id|bigint|
+|user_id|bigint|
+### Association
+- belongs_to :group
+- belongs_to :user
