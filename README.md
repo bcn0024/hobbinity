@@ -74,8 +74,8 @@ Things you may want to cover:
 ## group_user中間テーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|bigint|
-|user_id|bigint|
+|group_id|bigint|foreign_key: true|
+|user_id|bigint|foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
