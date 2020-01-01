@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Hobbinity DB設計
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true, index: true|
+|email|string|null: false|
+|password|string|null: false|
+|image|string|
+### Association
+- has_many :messages
+- has_many :group_users
+- has_many :groups,through::users_groups
