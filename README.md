@@ -72,6 +72,8 @@ Things you may want to cover:
 
 
 ## group_user中間テーブル
+|Column|Type|Options|
+|------|----|-------|
 |group_id|bigint|
 |user_id|bigint|
 ### Association
