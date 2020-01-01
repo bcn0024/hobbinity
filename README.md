@@ -46,6 +46,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups
 
+
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -56,3 +57,15 @@ Things you may want to cover:
 - has_many :users,though: :groups_users
 - has_many :messages
 - belongs_to :category
+
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|string|null: false|
+|image|string|null: false|
+|group|references|null: false|
+|user|references|null: false|
+### Association
+- belongs_to :group
+- belongs_to :user
