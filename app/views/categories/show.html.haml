@@ -1,6 +1,6 @@
 .group-box{style: "background-image: url(/images/sample14.jpeg);"}
   .groups
-    - if @groups
+    - if @groups.present?
       %p グループ一覧
       %ul
         - @groups.each do |group|
@@ -14,7 +14,7 @@
               -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
               -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける
     - else
-      %p 現在グループはありません。
+      %p 現在グループはありません
 =link_to new_category_group_path(@category.id), class:"group-create", id: "" do
   グループ作成
 = render partial: "shared/footer"
