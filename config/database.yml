@@ -12,9 +12,9 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   username: root
-  password:
+  password: 
   socket: /tmp/mysql.sock
 
 development:
@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: hobbinity_production
-  username: hobbinity
-  password: <%= ENV['HOBBINITY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
