@@ -37,7 +37,7 @@ $('.join-group').on('mouseover',function(){
 });
 $('#join-close').on('click',function(){
   $('.join-popup').fadeOut();
-  $.cookie('groupFlg', 'on', { expires: 1/2,path: '/' });
+  $.cookie('joinFlg', 'on', { expires: 1/2,path: '/' });
 });
 
 
