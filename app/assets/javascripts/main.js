@@ -29,4 +29,17 @@ $('#edit-close').on('click',function(){
   $.cookie('editFlg', 'on', { expires: 1/2,path: '/' });
 });
 
+
+
+$('.join-group').on('mouseover',function(){
+  $('.join-popup').show();
+  $.cookie('joinFlg') == 'on'?$(".join-popup").hide():$(".join-popup").show();
+});
+$('#join-close').on('click',function(){
+  $('.join-popup').fadeOut();
+  $.cookie('groupFlg', 'on', { expires: 1/2,path: '/' });
+});
+
+
 })
+
