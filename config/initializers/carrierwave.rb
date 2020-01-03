@@ -17,4 +17,5 @@ CarrierWave.configure do |config|
 
   config.fog_directory  = 'hobbinity2020'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/hobbinity2020'
+  end
 end
