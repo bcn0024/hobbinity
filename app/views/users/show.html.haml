@@ -1,11 +1,14 @@
 .wrapper
   .wrapper__images{style: "background-image: url(/images/sample15.jpeg);"}
-    - @groups.each do |group|
-      .wrapper__images__card-img
-        =link_to category_group_path(group.category.id, group.id) do
-          =image_tag group.category.image, height: "390",width: "100%", class: "images"
-          .wrapper__images__card-img__image
-            = group.category.content
-            ／
-            = group.name
+    - if @groups.present?
+      - @groups.each do |group|
+        .wrapper__images__card-img
+          =link_to category_group_path(group.category.id, group.id) do
+            =image_tag group.category.image, height: "390",width: "100%", class: "images"
+            .wrapper__images__card-img__image
+              = group.category.content
+              ／
+              = group.name
+    - else
+      %p 現在参加しているグループはありません
 = render partial: "shared/footer"
