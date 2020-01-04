@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Img">` : "";
-    icon = message.icon ? `<img class="person-icon" src="${message.user.image.url}" width="64" height="64"></img>` : "";
+    icon = message.icon ? `<img class="person-icon" src="${message.user.image}" width="64" height="64"></img>` : "";
 
     var html = `<div class="message-box">
                 <div class="message-head">
