@@ -10,9 +10,6 @@
                 = group.name
               .group-length
                 = "#{group.users.length}人が参加してます"
-              -# category.idはコントローラーでfindしたものを用いるため＠が必要、
-              -#  =link_to "/categories/#{@category.id}/groups/#{group.id}", id: "" doでもいける
-              -# showなのでgroup.idはeachで定義しているためourblogと同様に＠なしでつける
     - else
       %p 現在グループはありません
 =link_to new_category_group_path(@category.id), class:"group-create", id: "" do

@@ -26,7 +26,6 @@ class GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name).merge(user_ids: [current_user.id], category_id: params[:category_id])
-    # createするものに対して（今回はグループ）マージしたいIDがhas manyの関係であればuser_ids: [current_user.id]などでidsとし、[]として引き渡す必要がある。
   end
 
   def set_category
