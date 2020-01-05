@@ -3,7 +3,6 @@ class GroupsController < ApplicationController
   
   def new
     @group = Group.new
-    # @group.users << current_userと記述することで、現在ログイン中のユーザーを、新規作成したグループに追加しています。
   end
   def create
     group = Group.create(group_params)
