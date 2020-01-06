@@ -5,9 +5,11 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
   def create
-    group = Group.create(group_params)
-    redirect_to "/categories/#{@category.id}", notice: "グループ「#{group.name}」を登録しました。"
+    @group = Group.create(group_params)
+    redirect_to "/categories/#{@category.id}", notice: "グループ「#{@group.name}」を登録しました。"
+    
   end
+  # "/categories/#{@category.id}"
   
   def show
     @group = Group.find(params[:id])
