@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     img = message.image ? `<img class="lower-message__image" src="${message.image}" alt="Img">` : "";
 
-    icon = message.icon ? `<img class="person-icon" src="${message.icon}" width="64" height="64">` : "";
+    icon = message.icon ? `<img class="person-icon" src="${message.icon}" width="64" height="64">` : `<i class="fa fa-user-circle person"></i>`;
     // function face(message) {
     //   if(message.icon == null){
     //     icon = `<img class="person-icon" src="${message.icon}" width="64" height="64">`;
