@@ -17,6 +17,8 @@ default: &default
   password: 
   socket: /tmp/mysql.sock
 
+  host: db
+  
 development:
   <<: *default
   database: hobbinity_development
