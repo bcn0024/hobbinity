@@ -9,7 +9,7 @@
               .group-name
                 = group.name
               .group-length
-                = "#{group.users.length}人が参加してます"
+                = "#{group.users.length}人が参加してます！"
     - else
       %p 現在グループはありません
 =link_to new_category_group_path(@category.id), class:"group-create", id: "" do
