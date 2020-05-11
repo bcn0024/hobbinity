@@ -6,9 +6,9 @@ $(function () {
   });
   $('#user-close').on('click',function(){
     $('.user-popup').fadeOut();
-    $.cookie('userFlg', 'on', { expires: 1/2,path: '/' });
+    $.cookie('userFlg', 'on', { expires: 1.0/(24*60*10),path: '/' });
   });
-  // expires: 1.0/(24*60*10)
+  // expires: 1.0/(24*60*10)or1/2
 
 $('.footer__groups').on('mouseover',function(){
   $('.group-popup').show();
